@@ -1,7 +1,14 @@
 .Main__content {
+    position: relative;
+
 }
 .Hr__line {
     border-top: 1px solid rgb(189, 174, 174);
+}
+.Main__list {
+    margin-left: 30px;
+    font-size: 16px;
+    position: absolute;
 }
 .Main__title {
     font-size: 100px;
