@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './Input.module.css'
-const Input = () => {
+const Input = (props) => {
   return (
-    <input type="number" className={classes.main__input} placeholder="Введите число"/>
+    <input {...props}  className={classes.main__input} />
 
   );
 };

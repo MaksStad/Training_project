@@ -5,11 +5,20 @@
 .Hr__line {
     border-top: 1px solid rgb(189, 174, 174);
 }
-.Main__list {
-    margin-left: 30px;
-    font-size: 16px;
+.Main__table {
+    border: 1px solid ;
+    width: 400px;
+    min-width: 100px;
+    max-width: 100%;
+    margin-left: 20px;
     position: absolute;
 }
+.tableTittle{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
 .Main__title {
     font-size: 100px;
     line-height: 1.2;
