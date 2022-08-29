@@ -3,6 +3,8 @@ import classes from './MainContent.module.css'
 import Input from './UI/Input'
 import ButtonEquals from "./ButtonEquals";
 import ResultTable from "./ResultTable"
+import ResultTable1 from "./ResultTable1";
+
 
 const MainContent = () => {
   const [results, setResults] = useState([])
@@ -39,12 +41,33 @@ const MainContent = () => {
       />
       <span>=</span>
       <ButtonEquals onClick={addNewResult}>RESULT</ButtonEquals>
-      <div className={classes.Main__table}>
-        <p className={classes.tableTittle}>История транзакций</p>
-        {results.map((result, index) =>
-          <ResultTable number={index + 1} result={result} key={result.id}/>
-        )}
-      </div>
+       {results.length
+          ?
+          <table className={classes.Main__table1}>
+             <colgroup>
+                <col style={{width: '15%'}}/>
+                <col style={{width: '35%'}}/>
+
+             </colgroup>
+             <tr>
+                <th className={classes.tableTittle} colSpan={3}>История транзакций</th>
+             </tr>
+             <tr>
+                <th>№</th>
+                <th>Сумма</th>
+                <th>Дата</th>
+             </tr>
+             {results.map((result, index) =>
+                <ResultTable1 number={index + 1} result={result} key={result.id}/>
+             )}
+          </table>
+          :
+          <table className={classes.Main__table1}>
+             <tr>
+                <th className={classes.tableTittle} colSpan={3}>История транзакций пуста</th>
+             </tr>
+          </table>
+       }
       <h1 className={classes.Main__title}>Dramatic</h1>
       <h4 className={classes.Main__text}>Objectively innovate empowered manufactured products whereas parallel platforms.</h4>
       <div className={classes.Main__actions}>
