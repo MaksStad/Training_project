@@ -11,11 +11,10 @@ const MainContent = () => {
 
 
    const addNewResult = (e) => {
-     e.preventDefault();
      let sum = Number(num) + Number(num1);
      let date = new Date().toLocaleString();
      const newResult = {
-        id: Date.now(),
+        id: Date.now().valueOf(),
         sum,
         date,
      };
