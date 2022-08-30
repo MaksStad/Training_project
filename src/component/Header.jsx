@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from "../img/Logo.jpg";
-import icon from "../img/icon.jpg";
 import classes from './Header.module.css';
 import Navmenu from "./UI/nav/Navmenu";
 
