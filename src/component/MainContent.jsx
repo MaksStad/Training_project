@@ -17,24 +17,16 @@ const MainContent = () => {
 
 
    const sortBy = (sort) => {
-     if (order === 'ASC') {
-        const sorted = [...results].sort((a,b) =>
-           a[sort] > b[sort] ? 1 : -1
-        );
-        setResults(sorted);
-        setOrder('DSC');
-     }
-      if (order === 'DSC') {
-         const sorted = [...results].sort((a,b) =>
-            a[sort] < b[sort] ? 1 : -1
-         );
-         setResults(sorted);
-         setOrder('ASC');
-      }
+      const sorted = [...results].sort((a,b) =>
+         order === 'ASC' ? a[sort] > b[sort] ? 1 : -1 : a[sort] < b[sort] ? 1 : -1
+      );
+      setResults(sorted);
+      setOrder((order === 'ASC') ? 'DSC' : 'ASC');
    }
-   const ArrowSort = () => {
-      return ((order === 'ASC') ? <ArrowSortUp/> : <ArrowSortDown/>)
-   }
+
+
+   const ArrowSort = () => order === 'ASC' ? <ArrowSortUp/> : <ArrowSortDown/>
+
    const sortField = (sort) => {
      sortBy(sort)
       setField(sort)
