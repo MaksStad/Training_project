@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './MainContent.module.css'
 import Input from './UI/Input'
 import ButtonEquals from "./ButtonEquals";
@@ -9,11 +9,12 @@ import ArrowSortUpDown from "./UI/ArrowSortUpDown";
 
 
 const MainContent = () => {
-  const [results, setResults] = useState([])
+   const [results, setResults] = useState([])
    const [num, setNum] = useState()
    const [num1, setNum1] = useState()
    const [order, setOrder] = useState('ASC')
    const[field, setField] = useState('')
+   const [total, setTotal] = useState(0);
 
 
    const sortBy = (sort) => {
@@ -44,6 +45,10 @@ const MainContent = () => {
      };
      setResults([newResult,...results])
   }
+      useEffect(() => {
+         let newTotal = results.reduce((prev,next) => prev + next.sum,0);
+         setTotal(newTotal);
+      })
 
 
   return (
@@ -103,6 +108,7 @@ const MainContent = () => {
              </tr>
           </table>
        }
+          <p className={classes.totalAmountSum}> <b>Полная сумма</b>  {total}</p>
       <h1 className={classes.Main__title}>Dramatic</h1>
       <h4 className={classes.Main__text}>Objectively innovate empowered manufactured products whereas parallel platforms.</h4>
       <div className={classes.Main__actions}>

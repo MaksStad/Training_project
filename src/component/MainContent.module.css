@@ -26,7 +26,18 @@ th span:hover {
     text-align: center;
     padding: 5px;
 }
-
+.totalAmountSum {
+    display: inline-block;
+    border: 1px solid ;
+    width: 200px;
+    max-width: 100%;
+    margin-left: 20px;
+    font-size:16px;
+    padding: 6px;
+    background: rgb(231, 160, 106);
+    text-align: center;
+    margin-top: 10px;
+}
 .Main__title {
     font-size: 100px;
     line-height: 1.2;
