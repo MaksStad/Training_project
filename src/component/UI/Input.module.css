@@ -1,16 +1,26 @@
 .main__input {
     width: 120px;
     height: 30px;
-    margin: 20px 20px;
+    margin: 20px;
     border: 1px solid #ffffff;
-    background-color: rgb(138, 111, 89);
+    background-color: rgb(23, 21, 10);
     font-size:16px;
     color: white;
-    overflow-x: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+.main__input::-webkit-outer-spin-button,
+.main__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 ::-webkit-input-placeholder {
     color: white;
 }
-span {
-    font-size: 30px;
+.main__input:focus{
+    border: 1px solid #00ff0d;
+
+
+}
+.main__input:focus::-webkit-input-placeholder {
+    color: #db98dc;
 }

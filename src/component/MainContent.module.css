@@ -5,14 +5,28 @@
 .Hr__line {
     border-top: 1px solid rgb(189, 174, 174);
 }
+.Main__tableSum {
+    width: 560px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    margin: 10px auto;
+    background-color: rgba(57, 40, 58, 0.51);
+}
+.inputOperator {
+    font-size: 30px;
+    color: white;
+
+}
 .Main__table1, td, th {
     border: 1px solid ;
     width: 400px;
+    height: 26px;
     max-width: 100%;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
     border-collapse:collapse;
     padding: 3px;
-    background: rgb(231, 160, 106);
+    background: rgba(202, 215, 231, 0.7);
 }
 th span {
     font-size: 14px;
@@ -22,22 +36,25 @@ th span:hover {
     cursor: pointer;
 }
 .tableTittle{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     padding: 5px;
 }
 .totalAmountSum {
-    display: inline-block;
     border: 1px solid ;
     width: 200px;
+    height: 40px;
     max-width: 100%;
-    margin-left: 20px;
-    font-size:16px;
-    padding: 6px;
+    font-size:18px;
     background: rgb(231, 160, 106);
+    margin: 10px auto;
+    padding-top: 8px;
     text-align: center;
-    margin-top: 10px;
+    background: #000000;
+    border-radius: 15px;
+    color: white;
 }
+
 .Main__title {
     font-size: 100px;
     line-height: 1.2;
