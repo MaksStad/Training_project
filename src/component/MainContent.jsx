@@ -48,8 +48,7 @@ const MainContent = () => {
       useEffect(() => {
          let newTotal = results.reduce((prev,next) => prev + next.sum,0);
          setTotal(newTotal);
-      })
-
+      }, [results]);
 
   return (
     <div className={classes.Main__content}>
