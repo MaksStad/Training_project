@@ -38,7 +38,6 @@ const MainContent = () => {
      let sum = Number(num) + Number(num1);
      let date = new Date().toLocaleString();
      const newResult = {
-        // number: results.length+1,
         id: Date.now().valueOf(),
         sum,
         date,
@@ -87,9 +86,7 @@ const MainContent = () => {
              </tr>
              <tr>
                 <th>
-                   <span>№
-                       {/*onClick={() => {sortField('number')}}>№{field ==='number' ? <ArrowSort/> : <ArrowSortUpDown/>}*/}
-                   </span>
+                   <span>№</span>
                 </th>
                 <th>
                    <span
@@ -115,11 +112,6 @@ const MainContent = () => {
        }
           <p className={classes.totalAmountSum}>Полная сумма = {total}</p>
        </div>
-      {/*<h1 className={classes.Main__title}>Dramatic</h1>*/}
-      {/*<h4 className={classes.Main__text}>Objectively innovate empowered manufactured products whereas parallel platforms.</h4>*/}
-      {/*<div className={classes.Main__actions}>*/}
-      {/*  <a href="" className={classes.Main__button}>ENGAGE NOW</a>*/}
-      {/*</div>*/}
     </div>
   );
 };
